@@ -33,5 +33,7 @@
 - dalam section proyek, terdapat 3 link yang akan direct ke masing-masing file dengan nama projek itu sendiri. di file-file itu tersedia penjelasan dan menu tombol untuk back
 - dalam section hubungi saya, terdapat link yang akan direct ke file contact.html yang isinya meliputi  3 form (nama, email, textarea(pesan)) diakhiri denga du tag button (submit, reset)
 
+# Link Deploy
+https://revou-fsse-oct25.github.io/milestone-1-RaafiTeam2Madrid/
 
 
