@@ -4,53 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BappedaDKI</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      .avatar-shadow {
+        box-shadow: 0 10px 30px rgba(16, 185, 129, 0.15);
+      }
+    </style>
   </head>
-  <body>
+  <body class="bg-gray-50 text-gray-800 antialiased">
     <!-- header -->
-    <header>
-      <section id="bappeda" style="padding: 40px 20px; background-color: whitesmoke">
-        <div
-          style="
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
-            max-width: 1000px;
-            margin: auto;
-            flex-wrap: wrap;
-          "
-        >
-          <aside class="left" style="flex: 1; text-align: center">
-            <img
-              src="https://pbs.twimg.com/profile_images/1495566538996289539/jKhtfWA5_400x400.jpg"
-              alt="Bappeda"
-              title="Bappeda "
-              style="
-                width: 230px;
-                height: 230px;
-                object-fit: cover;
-                border-radius: 10px;
-              "
-            />
-          </aside>
-
-          <article class="right" style="flex: 2; text-align: left">
-            <p style="line-height: 1.7; font-size: 16px; color: black">
-              Bappeda DKI Jakarta adalah Badan Perencanaan Pembangunan Daerah
-              yang bertugas merancang dan mengawal kebijakan pembangunan di
-              wilayah Provinsi DKI Jakarta.
-            </p>
-          </article>
-        </div>
+    <header class="bg-white shadow-sm">
+      <section
+        class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between"
+      >
+        <h1>
+          Profil Instansi -
+          <spanc class="text-green-700">Bappeda DKI JAkarta</spanc>
+        </h1>
+        <nav>
+          <a
+            href="/milestone-1-RaafiTeam2Madrid/index.html"
+            class="text-sm sm:text-base text-green-700 font-medium border border-green-600px-3 py-1 rounded-lg hover:bg-green-50 transition"
+          >
+            Kembali ke Portofolio
+          </a>
+        </nav>
       </section>
     </header>
-    <br />
-    <hr />
+
     <!-- main -->
-    <main>
-      <article style="flex: 2; text-align: left">
-        <h3>Tugas dan fungsi</h3>
-        <ol style="text-decoration: none">
+    <main class="max-w-5xl mx-auto px-4 py-10 space-y-10">
+      <!-- penjelasan instansi -->
+      <section
+        id="bappeda"
+        class="bg-white rounded-2xl shadow-sm p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 md:gap-10"
+      >
+        <figure class="flex-1 flex justify-center md:justify-start">
+          <img
+            src="https://pbs.twimg.com/profile_images/1495566538996289539/jKhtfWA5_400x400.jpg"
+            alt="Bappeda"
+            class="w-48 h-48 md:w-56 object-cover rounded-2xl avatar-shadow"
+          />
+        </figure>
+
+        <article class="flex-1 text-center md:text-left">
+          <h2 id="bappeda-title" class="text-2xl font-semibold mb-3">
+            Bappeda DKI <span class="text-green-800">Jakarta</span>
+          </h2>
+          <p class="leading-relaxed text-grey-700 text-justify">
+            Bappeda DKI Jakarta adalah Badan Perencanaan Pembangunan Daerah yang
+            bertugas merancang dan mengawal kebijakan pembangunan di wilayah
+            Provinsi DKI Jakarta. Bappeda memastikan arah pembangunan selaras
+            dengan kebutuhan masyarakat dan visi pemerintah daerah.
+          </p>
+        </article>
+      </section>
+      <!-- tugas dan fungsi -->
+      <section class="bg-white rounded-2xl shadow-sm p-6 md:p-8">
+        <h3 id="tugas-fungsi" class="text-xl font-semibold mb-4">
+          Tugas dan Fungsi Bappeda
+        </h3>
+        <ol
+          class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed"
+        >
           <li>
             Merancang kebijakan pembangunan berdasarkan data dan analisis
             kebutuhan masyarakat.
@@ -61,15 +77,20 @@
           </li>
           <li>
             Melakukan monitoring dan evaluasi terhadap pelaksanaan program
-            pembangunan.
+            pembangunan
           </li>
         </ol>
-      </article>
-      <br />
-      <hr />
-      <article style="flex: 2; text-align: center">
-        <h3>Hal Yang saya kerjakan</h3>
-        <p>
+      </section>
+
+      <!-- Pengalaman magang -->
+      <section class="bg-white rounded-2xl shadow-sm p-6 md:p-8">
+        <h3
+          id="pengalaman-title"
+          class="text-xl font-bold mb-4 text-center underline"
+        >
+          Hal yang saya kerjakan
+        </h3>
+        <p class="leading-relaxed text-gray-700 text-justify">
           Pada Agustus 2023, saya magang sebagai arsiparis di Unit Pelayanan dan
           Pemungutan Pajak Daerah Kecamatan Pasar Minggu. Tugas saya meliputi
           pemberkasan 42 box dokumen setoran massa, penataan arsip sesuai
@@ -77,99 +98,68 @@
           digitalisasi, serta penyusunan laporan audit arsip untuk evaluasi
           Dinas Kearsipan dan Perpustakaan Provinsi DKI Jakarta.
         </p>
-      </article>
-      <br>
-            <div
-        style="
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-around;
-          gap: 20px;
-        "
-      >
-        <div
-          style="
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            text-align: center;
-          "
-        >
-          <img
-            src="/milestone-1-RaafiTeam2Madrid/asset/bappeda_1.jpg"
-            alt="Bappeda"
-            style="
-              max-width: 100%;
-              height: 180px;
-              object-fit: cover;
-              border-radius: 5px;
-              margin-bottom: 15px;
-              display: block;
-              margin-left: auto;
-              margin-right: auto;
-            "
-          />
-          <p style="height: fit-content; font-size: small">
-            Menegrjakan pembuatan skema sistem temu kembali arsip menggunakan microsoft Excel
-          </p>
-        </div>
+      </section>
 
-        <!-- gambar 2 -->
-             <div
-        style="
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-around;
-          gap: 20px;
-        "
-      >
-        <div
-          style="
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            text-align: center;
-          "
+      <!-- Dokumentasi Kegiatan -->
+      <section class="space-y-4">
+        <h3 class="text-xl font-semibold" id="dokumentasi-title">
+          Dokumentasi Kegiatan
+        </h3>
+      </section>
+      <!-- foto 1 -->
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <article
+          class="bg-white rounded-2xl shadow-sm overflow-hidden flex flex-col"
         >
-          <img
-            src="/milestone-1-RaafiTeam2Madrid/asset/Bappeda_2.jpg"
-            alt="Bappeda 2"
-            style="
-              max-width: 100%;
-              height: 180px;
-              object-fit: cover;
-              border-radius: 5px;
-              margin-bottom: 15px;
-              display: block;
-              margin-left: auto;
-              margin-right: auto;
-            "
-          />
-          <p style="height: fit-content; font-size: small">
-           Pemberkasan arsip aktif dalam upaya pemenuhan fungsi kearsipan meliputi; 
-           kemudahan temu kembali, tracking hak akses, pemenuhan standar penyimpanan, pembantu pengambilan keputusan
-          </p>
-        </div>
+          <figure>
+            <img
+              src="/milestone-1-RaafiTeam2Madrid/asset/bappeda_1.jpg"
+              alt="Skema sistem temu kembali arsip menggunakan Microsoft Excel"
+              class="w-full h-52 object-cover"
+            />
+            <div class="p-4">
+              <p class="text-sm text-gray-700 leading-relaxed">
+                Mengerjakan pembuatan skema sistem temu kembali arsip
+                menggunakan Microsoft Excel sebagai pendukung proses
+                digitalisasi dan pencarian arsip yang lebih cepat.
+              </p>
+            </div>
+          </figure>
+        </article>
+
+        <!-- foto 2 -->
+        <article
+          class="bg-white rounded-2xl shadow-sm overflow-hidden flex flex-col"
+        >
+          <figure>
+            <img
+              src="/milestone-1-RaafiTeam2Madrid/asset/Bappeda_2.jpg"
+              alt="Pemberkasan arsip aktif di lingkungan Bappeda"
+              class="w-full h-52 object-cover"
+            />
+            <div class="p-4">
+              <p class="text-sm text-gray-700 leading-relaxed">
+                 Pemberkasan arsip aktif dalam upaya pemenuhan fungsi kearsipan
+                meliputi kemudahan temu kembali, tracking hak akses, pemenuhan
+                standar penyimpanan, serta membantu proses pengambilan keputusan
+                berdasarkan data.
+              </p>
+            </div>
+          </figure>
+        </article>
+      </section>
     </main>
-    <br><br>
-    <hr>
+
     <!-- footer -->
-    <footer style="background-color: white;">
-      <a
-        href="/milestone-1-RaafiTeam2Madrid/index.html"
-        style="
-          color: green;
-          text-decoration: none;
-          font-weight: bold;
-          justify-content: center;
-          font-size: xx-large;
-        "
-        >Back</a
-      >
-    </footer>
+     <footer class="border-t mt-8">
+      <section class="max-w-5xl mx-auto px-4 py-6 flex items-center justify-between">
+        <p class="text-sm text-gray-500">
+          2025 Pengalaman Magang - Bappeda DKI Jakarta
+        </p>
+        <a href="/milestone-1-RaafiTeam2Madrid/index.html" class="text-sm text-green-700 font-semibold hover:underline">
+          Kembali ke Portofolio
+        </a>
+      </section>
+     </footer>
   </body>
 </html>

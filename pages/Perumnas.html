@@ -4,74 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>perumnas</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      .avatar-shadow {
+        box-shadow: 0 10px 30px rgba(16, 185, 129, 0.15);
+      }
+    </style>
 </head>
-<body>
-     <!-- header -->
-    <header>
-      <section
-        id="Perumnas"
-        style="padding: 40px 20px; background-color: whitesmoke"
-      >
-        <div
-          style="
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
-            max-width: 1000px;
-            margin: auto;
-            flex-wrap: wrap;
-          "
-        >
-          <aside class="left" style="flex: 1; text-align: center">
-            <img
-              src="https://pbs.twimg.com/profile_images/906592108147965952/IyNS9jy4_400x400.jpg"
-              alt="Perumnas"
-              title="Perumnas"
-              style="
-                width: 230px;
-                height: 230px;
-                object-fit: cover;
-                border-radius: 10px;
-              "
-            />
-          </aside>
+<body class="bg-gray-50 text-gray-800 antialiased">
+  <!-- header -->
+    <header class="bg-white shadow-sm">
+      <section class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+        <h1 class="text-lg md:text-xl font-semibold">
+          Profil Instansi - <span class="text-green-700">Perumnas</span>
+        </h1>
 
-          <article class="right" style="flex: 2; text-align: left">
-            <p style="line-height: 1.7; font-size: 16px; color: black">
-              <strong>PERUMNAS</strong> adalah Badan Usaha Milik Negara (BUMN) yang berbentuk Perusahaan Umum (Perum) dimana keseluruhan sahamnya 100% dimiliki oleh Pemerintah, yaitu Negara Kesatuan Republik Indonesia. Perumnas didirikan dengan maksud dan tujuan sebagai solusi pemerintah dalam menyediakan perumahan yang layak bagi masyarakat menengah ke bawah
-            </p>
-          </article>
-        </div>
+        <nav>
+          <a 
+          href="/milestone-1-RaafiTeam2Madrid/index.html"
+          class="text-sm sm:text-base text-green-700 font-medium border border-green-600 px-3 py-1 rounded-lg hover:bg-green transition">
+          Kembali ke Portofolio
+          </a>
+        </nav>
+      </section>
     </header>
-    <hr>
-    <br>
-    <!-- main -->
-     <main>
-      <article style="flex: 2; text-align: left;">
-        <h3>Yang saya kerjakan</h3>
-        <ol style="text-decoration: none;">
-          <li>Pemberkasan arsip Kontak PKWT</li>
-          <li>Analisis data pajak</li>
-          <li>Pelabelan dan pemindahan arsip aktif</li>
-        </ol>
-      </article>
-     </main>
-     <!-- footer -->
-      <hr>
-      <br>
-    <footer>
-        <a
-        href="/milestone-1-RaafiTeam2Madrid/index.html"
-        style="
-          color: green;
-          text-decoration: none;
-          font-weight: bold;
-          justify-content: center;
-          font-size: xx-large;
-        "
-        >Back</a
-      >
-    </footer>
 </body>
 </html>

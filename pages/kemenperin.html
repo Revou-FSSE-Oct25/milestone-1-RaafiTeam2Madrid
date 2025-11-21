@@ -4,89 +4,118 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kementerian Perindustrian</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      .avatar-shadow {
+        box-shadow: 0 10px 30px rgba(16, 185, 129, 0.15);
+      }
+    </style>
   </head>
-  <body>
-    <!-- header -->
-    <header>
+  <body class="bg-gray-50 text-gray-800 antialiased">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
       <section
-        id="kemenperin"
-        style="padding: 40px 20px; background-color: whitesmoke"
+        class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between"
       >
-        <div
-          style="
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
-            max-width: 1000px;
-            margin: auto;
-            flex-wrap: wrap;
-          "
-        >
-          <aside class="left" style="flex: 1; text-align: center">
-            <img
-              src="data:image/png;base64,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"
-              alt="kemenperin"
-              title="kemenperin"
-              style="
-                width: 230px;
-                height: 230px;
-                object-fit: cover;
-                border-radius: 10px;
-              "
-            />
-          </aside>
+        <h1 class="text-lg sm:text-xl font-semibold">
+          Profil Instansi -
+          <span class="text-gray-700"
+            ><span class="text-green-700">Kementerian Perindustrian</span></span
+          >
+        </h1>
 
-          <article class="right" style="flex: 2; text-align: left">
-            <p style="line-height: 1.7; font-size: 16px; color: black">
-              Kementerian Perindustrian mempunyai tugas menyelenggarakan urusan
-              di bidang perindustrian dalam pemerintahan untuk membantu Presiden
-              dalam menyelenggarakan pemerintahan negara
-            </p>
-          </article>
-        </div>
+        <nav>
+          <a
+            href="/milestone-1-RaafiTeam2Madrid/index.html"
+            class="text-sm sm:text-base text-green-700 font-medium border border-green-600 px-3 py-1 rounded-lg hover:bg-green transition"
+          >
+            Kembali ke Portofolio</a
+          >
+        </nav>
+      </section>
     </header>
-    <hr>
-    <br>
-     
+
     <!-- main -->
-    <main>
-      <section>
-        <article style="flex: 2; text-align: left;">
-          <h3>Tugas Pokok</h3>
-          <ol style="text-decoration: none;">
-            <li>Perumusan, penetapan, dan pelaksanaan kebijakan di bidang perindustrian</li>
-            <li>Pelaksanaan bimbingan teknis dan supervisi atas pelaksanaan kebijakan di bidang perindustrian;</li>
-            <li>Pelaksanaan penelitian dan pengembangan di bidang perindustrian;</li>
-            <li>Pelaksanaan dukungan yang bersifat substantif kepada seluruh unsur organisasi di Lingkungan Kementerian Perindustrian;</li>
-            <li>Pembinaan dan pemberian dukungan administrasi di Lingkungan Kementerian Perindustrian;</li>
-            <li>Pengelolaan barang milik/kekayaan negara yang menjadi tanggung jawab Kementerian Perindustrian.</li>
-          </ol>
+    <main class="max-w-5xl mx-auto px-4 py-10 space-y-10">
+      <section
+        id="Kemenperin"
+        class="bg-white rounded-2xl shadow-sm p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 md:gap-10"
+      >
+        <figure class="flex-1 flex justify-center md:justify-start">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Logo_of_the_Ministry_of_Industry_of_the_Republic_of_Indonesia.png"
+            alt="Kemenperin"
+            class="w-48 h-48 md:h-56 object-cover rounded-2xl avatar-shadow"
+          />
+        </figure>
+        <article class="flex-1 text-center md:text-left">
+          <h2 id="kemenperin-title" class="text-2xl font-semibold mb-3">
+            Kementerian Perindustrian
+            <span class="text-green-700">Direktorat IKFT</span>
+          </h2>
+          <p class="leading-relaxed text-gray-700 text-justify">
+            Kementerian Perindustrian mempunyai tugas menyelenggarakan urusan di
+            bidang perindustrian dalam pemerintahan untuk membantu Presiden
+            dalam menyelenggarakan pemerintahan negara
+          </p>
         </article>
       </section>
+
+      <!-- Tugas dan fungsi -->
+      <section class="bg-white rounded-2xl shadow-sm p-6 md:p-8">
+        <h3 class="text-xl font-semibold mb-4" id="tugas-fungsi">
+          Tugas dan Fungsi Kementerian Perindustrian
+        </h3>
+
+        <ol
+          class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed"
+        >
+          <li>
+            Perumusan, penetapan, dan pelaksanaan kebijakan di bidang
+            perindustrian
+          </li>
+          <li>
+            Pelaksanaan penelitian dan pengembangan di bidang perindustrian
+          </li>
+          <li>
+            Pelaksanaan dukungan yang bersifat substantif kepada seluruh unsur
+            organisasi di Lingkungan Kementerian Perindustrian
+          </li>
+          <li>
+            Pembinaan dan pemberian dukungan administrasi di Lingkungan
+            Kementerian Perindustrian
+          </li>
+          <li>
+            Pengelolaan barang milik/kekayaan negara yang menjadi tanggung jawab
+            Kementerian Perindustrian.
+          </li>
+        </ol>
+      </section>
+
+      <!-- Pengalaman Magang -->
+      <section class="bg-white rounded-2xl shadow-sm p-6 md:p-8">
+        <h3 
+        id="pengalaman"
+        class="text-xl font-bold mb-4 text-center underline">Hal yang saya kerjakan</h3>
+        <p class="leading-relaxed text-gray-700 text-justify">
+          Saya berperan dalam mendukung administrasi dan koordinasi tim di 2
+          Idustri Kimia Hulu, termasuk menusun jadwal kerja, merekap surat
+          masuk/keluar menyiapkan materi rapat, serta memperbarui data industri
+          di sistem OSS. Saya juga menyusun notulensi, menjadi MC dalam acara
+          Kick off HGBT, mendampingi direktur dalam tugas kedinasan, dan
+          mengarsipkan arsip tim secara sistematis
+        </p>
+      </section>
     </main>
-    <hr>
-    <br>
-    <!-- section penerapan proyek -->
-     <section>
-      <article style="flex: auto; text-align: left;">
-        <h3>Hal yang saya kerjakan</h3>
-        <p>Saya berperan dalam mendukung administrasi dan koordinasi tim di 2 Idustri Kimia Hulu, termasuk menusun jadwal kerja, merekap surat masuk/keluar menyiapkan materi rapat, serta memperbarui data industri di sistem OSS. Saya juga menyusun notulensi, menjadi MC dalam acara Kick off HGBT, mendampingi direktur dalam tugas kedinasan, dan mengarsipkan arsip tim secara sistematis</p>
-      </article>
-      <hr>
+
     <!-- footer -->
-    <footer>
-      <a
+     <footer class="border-t mt-8">
+      <section class="max-w-5xl mx-auto px-4 py-6 flex items-center justify-between">
+        <p class="text-sm text-gray-500">2025 Pengalaman Magang Kementerian Perindustrian</p>
+        <a 
         href="/milestone-1-RaafiTeam2Madrid/index.html"
-        style="
-          color: green;
-          text-decoration: none;
-          font-weight: bold;
-          justify-content: center;
-          font-size: xx-large;
-        "
-        >Back</a
-      >
-    </footer>
+        class="text-sm text-green-700 font-semibold hover:underline">Kembali ke Portofolio</a>
+      </section>
+     </footer>
   </body>
 </html>
